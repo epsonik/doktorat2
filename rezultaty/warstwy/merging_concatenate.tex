@@ -1,0 +1,29 @@
+\begin{table}
+\caption{Rezultaty badań z wykorzystaniem LSTM jako sieci rekurencyjnej oraz łączenia cech obrazu i tekstu metodą konkatenacji.}\label{tab:mergingCONCATENATE}
+\centering
+
+\resizebox{\textwidth}{!}{
+\begin{threeparttable}
+\begin{tabular}{|l|l|l|l|l|l|l|l|l|l|l|l|l}
+\hline
+& \textbf{
+\begin{tabular}[c]{@{}l@{}}Rozmiar\\ RNN\end{tabular}}  & \textbf{RKA\tnote{1}}& \textbf{RKPS\tnote{2}} &\textbf{p(mln)} & \textbf{t[ms]}& \textbf{B-1}& \textbf{B-2}& \textbf{B-3}& \textbf{B-4}& \textbf{C}& \textbf{S}\\ \hline
+1   & 512      & 512                   & 1024    &33,35&        6024           & 66,31   & 48,47   & 34,29   & 24,22 & 79,05 & 15,57 \\ \hline
+2   & 256      & 256                   & -         &27,04&    2814         & 66,96   & 48,74   & 34,32   & 24,28  & 79,07 & 15,54 \\ \hline
+3   & 128      & 128                   & 256         &24,68&       2647       & 67,27   & 49,69   & 35,36   & 25,04       & 80,44 & 15,71\\ \hline
+\textbf{4}  & \textbf{256}      & \textbf{256}                   & \textbf{512}           &\textbf{27,31}&     \textbf{2812}        & \textbf{67,51 }  & \textbf{49,75 }  & \textbf{35,56 }  & \textbf{25,36}    & \textbf{82,49} & \textbf{16,08} \\ \hline
+5   & 256      & -                     & -               &25,56&   2765    & 65,36   & 47,02   & 32,72   & 22,77    & 75,93 & 14,90  \\ \hline
+6   & 256      & -                     & 512               &26,66&   2513      & 66,22   & 48,39   & 34,32   & 24,27    & 78,71 & 15,09\\ \hline
+7   & 256      & 256                   & 256                 &25,32&    2247   & 67,56   & 49,72   & 35,48   & 25,24   & 81,85 & 15,63 \\ \hline
+8   & 256      & 256                   & 128                   &24,31&  1905   & 67,18   & 49,47   & 35,19   & 24,90   & 80,73 & 15,40  \\ \hline
+9   & 512      & 512                   & -        &   32,29          &   2393 &65,24 & 47,33   & 33,30   & 23,54   & 75,86 & 14,88  \\ \hline
+\end{tabular}
+\begin{tablenotes}[para, flushleft]
+ \item [1] Rozmiar komponentu adaptacyjnego
+       \item [2] Rozmiar komponentu predykcji słów
+       
+\end{tablenotes}
+\end{threeparttable}
+}
+
+\end{table} 

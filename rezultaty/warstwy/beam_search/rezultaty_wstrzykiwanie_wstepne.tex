@@ -1,0 +1,30 @@
+\begin{table}
+    \centering
+    \caption{Rezultaty uzyskane dla szerokości wiązki 3, posortowane według metryki CIDEr.}\label{tab:rezultaty_wstrzykiwanie_wstepne}
+    \resizebox{\textwidth}{!}{
+\begin{tabular}{|l|l|l|l|l|l|l|l|l|}
+\hline
+\textbf{\begin{tabular}[c]{@{}l@{}}Sieć\\ szkieletowa \end{tabular}}&\textbf{\begin{tabular}[c]{@{}l@{}} Liczba parametrów\\ modelu (mln) \end{tabular}}&\textbf{\begin{tabular}[c]{@{}l@{}} Rozmiar warstwy\\ ukrytej LSTM \end{tabular}} & \textbf{B-1} & \textbf{B-2} & \textbf{B-3} & \textbf{B-4} & \textbf{R} & \textbf{C} \\ \hline
+\multirow{3}{*}{Resnet152}   & \multirow{3}{*}{58,14}  & 1024 & 56,15 & 56,15 & 3,67 & 0    & 39,69 & 41,41 \\ \cline{3-9} 
+                             &                         & 512  & 0     & 64,63 & 6,17 & 1,43 & 43,43 & 53,06 \\ \cline{3-9} 
+                             &                         & 256  & 53,97 & 53,97 & 2,76 & 0,54 & 35,08 & 40,03 \\ \hline
+\multirow{3}{*}{Densenet201} & \multirow{3}{*}{18,32}  & 1024 & 62,54 & 62,54 & 7,21 & 1,53 & 43,31 & 52,01 \\ \cline{3-9} 
+                             &                         & 512  & 61,75 & 61,75 & 5,99 & 1,41 & 42,86 & 50,02 \\ \cline{3-9} 
+                             &                         & 256  & 59,49 & 59,49 & 4,81 & 0,81 & 42,88 & 46,97 \\ \hline
+\multirow{3}{*}{Densenet161} & \multirow{3}{*}{26,47}  & 1024 & 59,88 & 59,88 & 5,74 & 1,18 & 41,51 & 47,7  \\ \cline{3-9} 
+                             &                         & 512  & 60,36 & 60,36 & 6,00    & 1,53 & 42,92 & 50,21 \\ \cline{3-9} 
+                             &                         & 256  & 54,29 & 54,29 & 5,23 & 0,88 & 43,23 & 46,87 \\ \hline
+\multirow{3}{*}{Regnet32}    & \multirow{3}{*}{141,33} & 1024 & 58,48 & 58,48 & 3,68 & 0,64 & 40,6  & 43,33 \\ \cline{3-9} 
+                             &                         & 512  & 61,51 & 61,51 & 5,84 & 1,22 & 42,93 & 49,35 \\ \cline{3-9} 
+                             &                         & 256  & 58,51 & 58,51 & 4,26 & 1,15 & 42,23 & 46,14 \\ \hline
+\multirow{3}{*}{Resnet101}   & \multirow{3}{*}{42,5}   & 1024 & 59,83 & 59,83 & 5,28 & 1,11 & 41,64 & 47,5  \\ \cline{3-9} 
+                             &                         & 512  & 59,76 & 59,76 & 4,89 & 1,12 & 41,87 & 48,19 \\ \cline{3-9} 
+                             &                         & 256  & 61,35 & 61,35 & 5,55 & 1,19 & 43,37 & 49,00    \\ \hline
+\multirow{3}{*}{Densenet121} & \multirow{3}{*}{69,54}  & 1024 & 57,71 & 57,71 & 5,67 & 1,15 & 40,84 & 46,43 \\ \cline{3-9} 
+                             &                         & 512  & 53,12 & 53,12 & 5,12 & 1,26 & 40,72 & 44,74 \\ \cline{3-9} 
+                             &                         & 256  & 58,91 & 58,91 & 5,26 & 0,87 & 42,87 & 47,25 \\ \hline
+\multirow{3}{*}{InceptionV3} & \multirow{3}{*}{21,8}   & 1024 & 60,81 & 60,81 & 6,22 & 1,41 & 42,17 & 47,39 \\ \cline{3-9} 
+                             &                         & 512  & 59,66 & 59,66 & 6,49 & 1,62 & 42,1  & 48,03 \\ \cline{3-9} 
+                             &                         & 256  & 53,11 & 53,11 & 4,06 & 0,73 & 41,83 & 42,14 \\ \hline
+\end{tabular}}
+\end{table}

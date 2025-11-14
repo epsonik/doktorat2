@@ -1,0 +1,19 @@
+
+\begin{table}
+    \centering
+    \caption{Rezultaty metryki CIDEr dla wariantów sieci szkieletowych oraz rozmiaru szerokości wiązki, uśrednione względem rozmiaru warstwy ukrytej LSTM.}\label{tab:lstm_warstwa_ukryta_siec_szkieletowa_wstrzykiwanie_wstepne}
+
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{|l|lllllll|}
+\hline
+\multirow{2}{*}{\textbf{\begin{tabular}[c]{@{}l@{}}Warstwa ukryta\\ LSTM \end{tabular}}} & \multicolumn{7}{c|}{\textbf{Sieć szkieletowa}}                                                                                                                                                                                    \\ \cline{2-8} 
+                                  & \multicolumn{1}{l|}{Densenet121} & \multicolumn{1}{l|}{Densenet161} & \multicolumn{1}{l|}{Densenet201} & \multicolumn{1}{l|}{InceptionV3} & \multicolumn{1}{l|}{Regnet32} & \multicolumn{1}{l|}{Resnet101} & Resnet152 \\ \hline
+256                               & \multicolumn{1}{l|}{47,14}      & \multicolumn{1}{l|}{47,07}      & \multicolumn{1}{l|}{46,63}      & \multicolumn{1}{l|}{41,78}      & \multicolumn{1}{l|}{45,71}   & \multicolumn{1}{l|}{48,45}    & 39,72    \\ \hline
+512                               & \multicolumn{1}{l|}{44,27}      & \multicolumn{1}{l|}{49,90}      & \multicolumn{1}{l|}{49,83}      & \multicolumn{1}{l|}{47,14}      & \multicolumn{1}{l|}{49,37}   & \multicolumn{1}{l|}{47,99}    & 52,60    \\ \hline
+1024                              & \multicolumn{1}{l|}{46,37}      & \multicolumn{1}{l|}{47,81}      & \multicolumn{1}{l|}{51,93}      & \multicolumn{1}{l|}{46,76}      & \multicolumn{1}{l|}{42,81}   & \multicolumn{1}{l|}{47,30}    & 41,31    \\ \hline
+\end{tabular}%
+}
+\end{table}
+
+
+

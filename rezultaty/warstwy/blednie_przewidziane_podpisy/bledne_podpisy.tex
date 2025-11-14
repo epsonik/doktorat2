@@ -1,0 +1,204 @@
+
+
+
+% \begin{table}
+% \caption{Zestawienie czterech blednie wygenerowanych podpisów, razem z rezultatami metryk. Tabela zawiera także bigramy słów z błędnie wygenerowanych podpisów razem z liczbą tych bigramów w zbiorze treningowym.}\label{tab:bledne_podpisy}
+% \resizebox{\textwidth}{!}{
+% \begin{tabular}{|l|ll|ll|ll|ll|}
+% \hline
+% \textbf{Obraz} &
+%   \multicolumn{2}{l|}{\ref{fig:bledne_podpisy_a}} &
+%   \multicolumn{2}{l|}{\ref{fig:bledne_podpisy_b}} &
+%   \multicolumn{2}{l|}{\ref{fig:bledne_podpisy_c}} &
+%   \multicolumn{2}{l|}{\ref{fig:bledne_podpisy_d}} \\ \hline
+% \textbf{\begin{tabular}[c]{@{}l@{}} Podpisy\\ referencyjne \end{tabular}}&
+%   \multicolumn{2}{l|}{\begin{tabular}[c]{@{}l@{}}*A pile of containers   filled\\      with lots of apple juice.\\      *The stand is selling apples\\      and apple cider outside.\\      *Many various sized bottles\\      of apple cider are on the table.\\      *A bunch of apples and\\      cider for sale on a table.\\      *A farm stand selling apple\\      cider and apples.\end{tabular}} &
+%   \multicolumn{2}{l|}{\begin{tabular}[c]{@{}l@{}}*Two red and yellow   trains\\      parked next to each other.\\      *Two railroad trains with\\      different front cars together\\      *Two yellow and red trains\\      parked on the tracks\\      *Red and yellow trains sitting\\      side by side to each other.\\      *The front of modern\\      commuter trains at the station\end{tabular}} &
+%   \multicolumn{2}{l|}{\begin{tabular}[c]{@{}l@{}}*Three women in bright   colors\\      and headdresses are holding love\\      message cards\\      *Three women in costume are\\      holding papers that say "I love you"\\      *Girls in bright costumes holding\\      little signs that say I love you.\\      *Three women in elaborate costumes\\      hold up "I Love You" cards.\\      *Three women in colorful costumes\\      holding I love you signs.\end{tabular}} &
+%   \multicolumn{2}{l|}{\begin{tabular}[c]{@{}l@{}}*A brown and white dog   with\\      a Frisbee in his mouth .\\      *A dog with his front paws off\\      the ground holds a white\\      Frisbee in his mouth in\\      an RV campground .\\      *A white and brown dog\\      jumps up for a white Frisbee .\\      *Dog catching Frisbee .\\      *The brown and white dog is\\      catching a Frisbee in his mouth .\end{tabular}} \\ \hline
+% \textbf{\begin{tabular}[c]{@{}l@{}} Konfiguracja\\ modelu\end{tabular}} &
+%   \multicolumn{2}{l|}{Resnet152V2 oraz FastText} &
+%   \multicolumn{2}{l|}{Resnet152V2 oraz FastText} &
+%   \multicolumn{2}{l|}{Xception oraz FastText} &
+%   \multicolumn{2}{l|}{InceptionV3 oraz GloVe} \\ \hline
+% \textbf{\begin{tabular}[c]{@{}l@{}}Przewidziany\\ podpis\end{tabular} }&
+%   \multicolumn{2}{l|}{\begin{tabular}[c]{@{}l@{}}a market with a   bunch\\      of bananas and vegetables\end{tabular}} &
+%   \multicolumn{2}{l|}{\begin{tabular}[c]{@{}l@{}}a train is pulling   into a station\\      with people standing by it\end{tabular}} &
+%   \multicolumn{2}{l|}{\begin{tabular}[c]{@{}l@{}}a woman holding a   umbrella\\      in front of a crowd\end{tabular}} &
+%   \multicolumn{2}{l|}{\begin{tabular}[c]{@{}l@{}}a dog is laying on a   couch\\      with a frisbee\end{tabular}} \\ \hline
+%  &
+%   \multicolumn{1}{l|}{\textbf{n-gram}} &
+%   \textbf{liczba} &
+%   \multicolumn{1}{l|}{\textbf{n-gram}} &
+%   \textbf{liczba} &
+%   \multicolumn{1}{l|}{\textbf{n-gram}} &
+%   \textbf{liczba} &
+%   \multicolumn{1}{l|}{\textbf{n-gram}} &
+%   \textbf{liczba} \\ \hline
+% \multirow{9}{*}{\textbf{bigramy}} &
+%   \multicolumn{1}{l|}{\textbf{"and vegetables"}} &
+%   \textbf{977} &
+%   \multicolumn{1}{l|}{"by it"} &
+%   85 &
+%   \multicolumn{1}{l|}{\textbf{"front of"}} &
+%   \textbf{12517} &
+%   \multicolumn{1}{l|}{couch with"} &
+%   449 \\ \cline{2-9} 
+%  &
+%   \multicolumn{1}{l|}{\textbf{"bananas and"}} &
+%   \textbf{411} &
+%   \multicolumn{1}{l|}{"into station"} &
+%   128 &
+%   \multicolumn{1}{l|}{"holding umbrella"} &
+%   63 &
+%   \multicolumn{1}{l|}{"dog is"} &
+%   1305 \\ \cline{2-9} 
+%  &
+%   \multicolumn{1}{l|}{"bunch of"} &
+%   3724 &
+%   \multicolumn{1}{l|}{"is pulling"} &
+%   285 &
+%   \multicolumn{1}{l|}{\textbf{"in front"}} &
+%   \textbf{12363} &
+%   \multicolumn{1}{l|}{"is laying"} &
+%   1294 \\ \cline{2-9} 
+%  &
+%   \multicolumn{1}{l|}{"market with"} &
+%   140 &
+%   \multicolumn{1}{l|}{\textbf{"people standing"}} &
+%   \textbf{2740} &
+%   \multicolumn{1}{l|}{"of crowd"} &
+%   199 &
+%   \multicolumn{1}{l|}{\textbf{"laying on"}} &
+%   \textbf{3539} \\ \cline{2-9} 
+%  &
+%   \multicolumn{1}{l|}{"of bananas"} &
+%   1027 &
+%   \multicolumn{1}{l|}{"pulling into"} &
+%   246 &
+%   \multicolumn{1}{l|}{"umbrella in"} &
+%   328 &
+%   \multicolumn{1}{l|}{\textbf{"on couch"}} &
+%   \textbf{1410} \\ \cline{2-9} 
+%  &
+%   \multicolumn{1}{l|}{"with bunch"} &
+%   386 &
+%   \multicolumn{1}{l|}{"standing by"} &
+%   1071 &
+%   \multicolumn{1}{l|}{\textbf{"Woman holding"}} &
+%   \textbf{1562} &
+%   \multicolumn{1}{l|}{"with frisbee"} &
+%   853 \\ \cline{2-9} 
+%  &
+%   \multicolumn{2}{l|}{\multirow{3}{*}{}} &
+%   \multicolumn{1}{l|}{"station with"} &
+%   292 &
+%   \multicolumn{2}{l|}{\multirow{3}{*}{}} &
+%   \multicolumn{2}{l|}{\multirow{3}{*}{}} \\ \cline{4-5}
+%  &
+%   \multicolumn{2}{l|}{} &
+%   \multicolumn{1}{l|}{"train is"} &
+%   1310 &
+%   \multicolumn{2}{l|}{} &
+%   \multicolumn{2}{l|}{} \\ \cline{4-5}
+%  &
+%   \multicolumn{2}{l|}{} &
+%   \multicolumn{1}{l|}{\textbf{"with people"}} &
+%   \textbf{1328} &
+%   \multicolumn{2}{l|}{} &
+%   \multicolumn{2}{l|}{} \\ \hline
+% \textbf{B-1} &
+%   \multicolumn{2}{l|}{44,44} &
+%   \multicolumn{2}{l|}{33,33} &
+%   \multicolumn{2}{l|}{19,99} &
+%   \multicolumn{2}{l|}{54,29} \\ \hline
+% \textbf{B-1} &
+%   \multicolumn{2}{l|}{0} &
+%   \multicolumn{2}{l|}{28,87} &
+%   \multicolumn{2}{l|}{0} &
+%   \multicolumn{2}{l|}{46,73} \\ \hline
+% \textbf{B-1} &
+%   \multicolumn{2}{l|}{0} &
+%   \multicolumn{2}{l|}{22,83} &
+%   \multicolumn{2}{l|}{0} &
+%   \multicolumn{2}{l|}{29,12} \\ \hline
+% \textbf{B-1} &
+%   \multicolumn{2}{l|}{0} &
+%   \multicolumn{2}{l|}{0} &
+%   \multicolumn{2}{l|}{0} &
+%   \multicolumn{2}{l|}{0} \\ \hline
+% \textbf{M} &
+%   \multicolumn{2}{l|}{2,24} &
+%   \multicolumn{2}{l|}{4,52} &
+%   \multicolumn{2}{l|}{10,5} &
+%   \multicolumn{2}{l|}{1,65} \\ \hline
+% \textbf{R} &
+%   \multicolumn{2}{l|}{0,55} &
+%   \multicolumn{2}{l|}{24,75} &
+%   \multicolumn{2}{l|}{7,2} &
+%   \multicolumn{2}{l|}{86,9} \\ \hline
+% \textbf{C} &
+%   \multicolumn{2}{l|}{39,29} &
+%   \multicolumn{2}{l|}{33,33} &
+%   \multicolumn{2}{l|}{0,1} &
+%   \multicolumn{2}{l|}{58,65} \\ \hline
+% \end{tabular}}
+% \end{table}
+
+
+\begin{table}
+\caption{Zestawienie dwóch z czterech błędnie wygenerowanych podpisów, razem z rezultatami metryk. Tabela zawiera także bigramy słów z błędnie wygenerowanych podpisów razem z liczbą tych bigramów w zbiorze treningowym.}
+\label{tab:bledne_podpisy}
+\resizebox{\textwidth}{!}{
+\begin{tabular}{|l|ll|ll|}
+\hline
+\textbf{Obraz} & \multicolumn{2}{l|}{\ref{fig:bledne_podpisy_a}} & \multicolumn{2}{l|}{\ref{fig:bledne_podpisy_b}} \\ \hline
+\textbf{\begin{tabular}[c]{@{}l@{}}Podpisy\\ referencyjne\end{tabular}} & \multicolumn{2}{l|}{\begin{tabular}[c]{@{}l@{}}*A pile of containers filled\\ with lots of apple juice.\\ *The stand is selling apples\\ and apple cider outside.\\ *Many various sized bottles\\ of apple cider are on the table.\\ *A bunch of apples and\\ cider for sale on a table.\\ *A farm stand selling apple\\ cider and apples.\end{tabular}} & \multicolumn{2}{l|}{\begin{tabular}[c]{@{}l@{}}*Two red and yellow trains\\ parked next to each other.\\ *Two railroad trains with\\ different front cars together\\ *Two yellow and red trains\\ parked on the tracks\\ *Red and yellow trains sitting\\ side by side to each other.\\ *The front of modern\\ commuter trains at the station\end{tabular}} \\ \hline
+\textbf{\begin{tabular}[c]{@{}l@{}}Konfiguracja\\ modelu\end{tabular}} & \multicolumn{2}{l|}{Resnet152V2 oraz FastText} & \multicolumn{2}{l|}{Resnet152V2 oraz FastText} \\ \hline
+\textbf{\begin{tabular}[c]{@{}l@{}}Przewidziany\\ podpis\end{tabular}} & \multicolumn{2}{l|}{\begin{tabular}[c]{@{}l@{}}a market with a bunch\\ of bananas and vegetables\end{tabular}} & \multicolumn{2}{l|}{\begin{tabular}[c]{@{}l@{}}a train is pulling into a station\\ with people standing by it\end{tabular}} \\ \hline
+ & \multicolumn{1}{l|}{\textbf{n-gram}} & \textbf{liczba} & \multicolumn{1}{l|}{\textbf{n-gram}} & \textbf{liczba} \\ \hline
+\multirow{9}{*}{\textbf{bigramy}} & \multicolumn{1}{l|}{\textbf{"and vegetables"}} & \textbf{977} & \multicolumn{1}{l|}{"by it"} & 85 \\ \cline{2-5} 
+ & \multicolumn{1}{l|}{\textbf{"bananas and"}} & \textbf{411} & \multicolumn{1}{l|}{"into station"} & 128 \\ \cline{2-5} 
+ & \multicolumn{1}{l|}{"bunch of"} & 3724 & \multicolumn{1}{l|}{"is pulling"} & 285 \\ \cline{2-5} 
+ & \multicolumn{1}{l|}{"market with"} & 140 & \multicolumn{1}{l|}{\textbf{"people standing"}} & \textbf{2740} \\ \cline{2-5} 
+ & \multicolumn{1}{l|}{"of bananas"} & 1027 & \multicolumn{1}{l|}{"pulling into"} & 246 \\ \cline{2-5} 
+ & \multicolumn{1}{l|}{"with bunch"} & 386 & \multicolumn{1}{l|}{"standing by"} & 1071 \\ \cline{2-5} 
+ & \multicolumn{2}{l|}{\multirow{3}{*}{}} & \multicolumn{1}{l|}{"station with"} & 292 \\ \cline{4-5} 
+ & \multicolumn{2}{l|}{} & \multicolumn{1}{l|}{"train is"} & 1310 \\ \cline{4-5} 
+ & \multicolumn{2}{l|}{} & \multicolumn{1}{l|}{\textbf{"with people"}} & \textbf{1328} \\ \hline
+\textbf{B-1} & \multicolumn{2}{l|}{44,44} & \multicolumn{2}{l|}{33,33} \\ \hline
+\textbf{B-2} & \multicolumn{2}{l|}{0} & \multicolumn{2}{l|}{28,87} \\ \hline
+\textbf{B-3} & \multicolumn{2}{l|}{0} & \multicolumn{2}{l|}{22,83} \\ \hline
+\textbf{B-4} & \multicolumn{2}{l|}{0} & \multicolumn{2}{l|}{0} \\ \hline
+\textbf{M} & \multicolumn{2}{l|}{2,24} & \multicolumn{2}{l|}{4,52} \\ \hline
+\textbf{R} & \multicolumn{2}{l|}{0,55} & \multicolumn{2}{l|}{24,75} \\ \hline
+\textbf{C} & \multicolumn{2}{l|}{39,29} & \multicolumn{2}{l|}{33,33} \\ \hline
+\end{tabular}}
+\end{table}
+
+\begin{table}
+\ContinuedFloat
+\caption{Zestawienie dwóch z czterech błędnie wygenerowanych podpisów cd.,  razem z rezultatami metryk. Tabela zawiera także bigramy słów z błędnie wygenerowanych podpisów razem z liczbą tych bigramów w zbiorze treningowym.}
+\resizebox{\textwidth}{!}{
+\begin{tabular}{|l|ll|ll|}
+\hline
+\textbf{Obraz} & \multicolumn{2}{l|}{\ref{fig:bledne_podpisy_c}} & \multicolumn{2}{l|}{\ref{fig:bledne_podpisy_d}} \\ \hline
+\textbf{\begin{tabular}[c]{@{}l@{}}Podpisy\\ referencyjne\end{tabular}} & \multicolumn{2}{l|}{\begin{tabular}[c]{@{}l@{}}*Three women in bright colors\\ and headdresses are holding love\\ message cards\\ *Three women in costume are\\ holding papers that say "I love you"\\ *Girls in bright costumes holding\\ little signs that say I love you.\\ *Three women in elaborate costumes\\ hold up "I Love You" cards.\\ *Three women in colorful costumes\\ holding I love you signs.\end{tabular}} & \multicolumn{2}{l|}{\begin{tabular}[c]{@{}l@{}}*A brown and white dog with\\ a Frisbee in his mouth .\\ *A dog with his front paws off\\ the ground holds a white\\ Frisbee in his mouth in\\ an RV campground .\\ *A white and brown dog\\ jumps up for a white Frisbee .\\ *Dog catching Frisbee .\\ *The brown and white dog is\\ catching a Frisbee in his mouth .\end{tabular}} \\ \hline
+\textbf{\begin{tabular}[c]{@{}l@{}}Konfiguracja\\ modelu\end{tabular}} & \multicolumn{2}{l|}{Xception oraz FastText} & \multicolumn{2}{l|}{InceptionV3 oraz GloVe} \\ \hline
+\textbf{\begin{tabular}[c]{@{}l@{}}Przewidziany\\ podpis\end{tabular}} & \multicolumn{2}{l|}{\begin{tabular}[c]{@{}l@{}}a woman holding a umbrella\\ in front of a crowd\end{tabular}} & \multicolumn{2}{l|}{\begin{tabular}[c]{@{}l@{}}a dog is laying on a couch\\ with a frisbee\end{tabular}} \\ \hline
+ & \multicolumn{1}{l|}{\textbf{n-gram}} & \textbf{liczba} & \multicolumn{1}{l|}{\textbf{n-gram}} & \textbf{liczba} \\ \hline
+\multirow{6}{*}{\textbf{bigramy}} & \multicolumn{1}{l|}{\textbf{"front of"}} & \textbf{12517} & \multicolumn{1}{l|}{"couch with"} & 449 \\ \cline{2-5} 
+ & \multicolumn{1}{l|}{"holding umbrella"} & 63 & \multicolumn{1}{l|}{"dog is"} & 1305 \\ \cline{2-5} 
+ & \multicolumn{1}{l|}{\textbf{"in front"}} & \textbf{12363} & \multicolumn{1}{l|}{"is laying"} & 1294 \\ \cline{2-5} 
+ & \multicolumn{1}{l|}{"of crowd"} & 199 & \multicolumn{1}{l|}{\textbf{"laying on"}} & \textbf{3539} \\ \cline{2-5} 
+ & \multicolumn{1}{l|}{"umbrella in"} & 328 & \multicolumn{1}{l|}{\textbf{"on couch"}} & \textbf{1410} \\ \cline{2-5} 
+ & \multicolumn{1}{l|}{\textbf{"Woman holding"}} & \textbf{1562} & \multicolumn{1}{l|}{"with frisbee"} & 853 \\ \hline
+\textbf{B-1} & \multicolumn{2}{l|}{19,99} & \multicolumn{2}{l|}{54,29} \\ \hline
+\textbf{B-2} & \multicolumn{2}{l|}{0} & \multicolumn{2}{l|}{46,73} \\ \hline
+\textbf{B-3} & \multicolumn{2}{l|}{0} & \multicolumn{2}{l|}{29,12} \\ \hline
+\textbf{B-4} & \multicolumn{2}{l|}{0} & \multicolumn{2}{l|}{0} \\ \hline
+\textbf{M} & \multicolumn{2}{l|}{10,5} & \multicolumn{2}{l|}{1,65} \\ \hline
+\textbf{R} & \multicolumn{2}{l|}{7,2} & \multicolumn{2}{l|}{86,9} \\ \hline
+\textbf{C} & \multicolumn{2}{l|}{0,1} & \multicolumn{2}{l|}{58,65} \\ \hline
+\end{tabular}}
+\end{table}

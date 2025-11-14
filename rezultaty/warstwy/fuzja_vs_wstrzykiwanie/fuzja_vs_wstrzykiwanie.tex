@@ -1,0 +1,131 @@
+% Rycina 1: Fundamentalny kontrast w płynności językowej i błędach relacyjnych
+\begin{figure}[htbp]
+    \centering
+    % Przykład 1: Błędy gramatyczne i składniowe (Image ID: 60623)
+    \begin{subfigure}[t]{0.48\textwidth}
+        \centering
+        \adjincludegraphics[width=\linewidth, trim={{0.7\textwidth} 0 0 0},clip]{rezultaty/warstwy/fuzja_vs_wstrzykiwanie/COCO_val2014_000000460623.jpg}
+        \caption{Image ID: 60623. \\
+        \textbf{Model A:} "a woman in a blue dress is eating a cake"\\
+        \textbf{Model B:} "a woman a is a and plate a and a"}
+        \label{fig:errors_contrast_a}
+    \end{subfigure}
+    \hfill
+    % Przykład 2: Zaburzona składnia (Image ID: 1590)
+    \begin{subfigure}[t]{0.48\textwidth}
+        \centering
+        \adjincludegraphics[width=\linewidth, trim={0 {0.7\textwidth} 0 0},clip]{rezultaty/warstwy/fuzja_vs_wstrzykiwanie/COCO_val2014_000000001590.jpg}
+        \caption{Image ID: 1590. \\
+        \textbf{Model A:} "a truck with a dog sitting on the back of it"\\
+        \textbf{Model B:} "a and dog is in back the of"}
+        \label{fig:errors_contrast_b}
+    \end{subfigure}
+    
+
+    
+    % Przykład 3: Pominięcie relacji (Image ID: 16005)
+    \begin{subfigure}[t]{0.48\textwidth}
+        \centering
+        \adjincludegraphics[width=\linewidth, trim={0 0 0 {0.3\textwidth}},clip]{rezultaty/warstwy/fuzja_vs_wstrzykiwanie/COCO_val2014_000000016005.jpg}
+        \caption{Image ID: 16005. \\
+        \textbf{Model A:} "a man is petting a cow in the street"\\
+        \textbf{Model B:} "a boy a and cow a and cow a"}
+        \label{fig:errors_contrast_c}
+    \end{subfigure}
+    \hfill
+    % Przykład 4: Błędna identyfikacja połączona z brakiem płynności (Image ID: 310618)
+    \begin{subfigure}[t]{0.48\textwidth}
+        \centering
+        \adjincludegraphics[width=0.88\linewidth, trim={{0.3\textwidth} 0 {0.3\textwidth} 0},clip]{rezultaty/warstwy/fuzja_vs_wstrzykiwanie/COCO_val2014_000000310618.jpg}
+        \caption{Image ID: 310618. \\
+        \textbf{Model A:} "a giraffe standing next to another giraffe..."\\
+        \textbf{Model B:} "a brown and cow a of deer a"}
+        \label{fig:errors_contrast_d}
+    \end{subfigure}
+
+    \caption{Drastyczny kontrast w \textbf{błędach płynności językowej}. Model A generuje spójne i gramatycznie poprawne podpisy. Model B wykazuje problemy na poziomie składni i gramatyki (a, b). W efekcie
+    pomijane są kluczowe relacje (c), co łączy się z błędami identyfikacji obiektów na obrazie (d).}
+    \label{fig:errors_fluency_contrast}
+\end{figure}
+
+% Rycina 2: Kontrast w redundancji (Stylistyczna vs Patologiczna)
+\begin{figure}[htbp]
+    \centering
+    % Przykład 1: Redundancja stylistyczna (Model A, Image ID: 165547)
+    \begin{subfigure}[t]{0.48\textwidth}
+        \centering
+        \includegraphics[width=0.75\linewidth]{rezultaty/warstwy/fuzja_vs_wstrzykiwanie/COCO_val2014_000000165547.jpg}
+        \caption{Image ID: 165547.\\ 
+        \textbf{Model A:} "a kitchen with a table and chairs and a table"}
+        \label{fig:errors_redundancy_a}
+    \end{subfigure}
+    \hfill
+    % Przykład 2: Patologiczna redundancja (Model B, Image ID: 259819)
+    \begin{subfigure}[t]{0.48\textwidth}
+        \centering
+        \includegraphics[width=0.75\linewidth]{rezultaty/warstwy/fuzja_vs_wstrzykiwanie/COCO_val2014_000000259819.jpg}
+        \caption{Image ID: 259819.\\
+        \textbf{Model B:} "a black white black black white black black black white black white black black white..." (podpis ucięty)}
+        \label{fig:errors_redundancy_b}
+    \end{subfigure}
+
+    % \caption{Kontrast w błędach dotyczących \textbf{zwięzłości i redundancji}. Model A (a) wykazuje drobną niezręczność stylistyczną (powtórzenie "a table"). Model B (b) wpada w pętlę powtórzeń, tracąc całkowicie płynności zdania.}
+    % \label{fig:errors_redundancy}
+% \end{figure}
+
+% % Rycina 3: Błędy wyższego rzędu w Modelu A (Faktograficzne i Spójności Semantycznej)
+% \begin{figure}[htbp]
+    \centering
+    % Przykład 1: Halucynacja obiektu (Image ID: 451305)
+    \begin{subfigure}[t]{0.48\textwidth}
+        \centering
+        \includegraphics[width=0.85\linewidth]{rezultaty/warstwy/fuzja_vs_wstrzykiwanie/COCO_val2014_000000451305.jpg}
+        \caption{Image ID: 451305. \\
+        \textbf{Model A:} "a zebra standing in a dirt field next to a rat"}
+        \label{fig:errors_higher_a}
+    \end{subfigure}
+    \hfill
+    % Przykład 3: Brak istotności (Image ID: 389378)
+    \begin{subfigure}[t]{0.48\textwidth}
+        \centering
+        \includegraphics[width=0.8\linewidth]{rezultaty/warstwy/fuzja_vs_wstrzykiwanie/COCO_val2014_000000389378.jpg}
+        \caption{Image ID: 389378. \\
+        \textbf{Model A:} "a street scene with focus on the side of the road"}
+        \label{fig:errors_higher_b}
+    \end{subfigure}
+    
+\hfill
+    % Przykład 2: Ogólnikowość (Image ID: 491497)
+    \begin{subfigure}[t]{0.48\textwidth}
+        \centering
+                \adjincludegraphics[width=\linewidth, trim={{0 0 0 0.3\textwidth}},clip]{rezultaty/warstwy/fuzja_vs_wstrzykiwanie/COCO_val2014_000000491497.jpg}
+        \caption{Image ID: 491497. \\
+        \textbf{Model A:} "a living room with a couch and a television"}
+        \label{fig:errors_higher_c}
+    \end{subfigure}
+
+\caption{Przykłady błędów wyższego rzędu charakterystyczne dla modeli płynnych (Model A). Obejmują one \textbf{błędy faktograficzne}, takie jak halucynacja obiektów (a, "rat"), oraz \textbf{błędy spójności semantycznej}: nadmierną generalizację (c) i brak istotności informacji (b).}
+    \label{fig:errors_higher_order}
+\end{figure}
+
+
+% \begin{figure}
+%   \begin{subfigure}{0.33\textwidth}
+%     \includegraphics[width=\linewidth]{rezultaty/warstwy/fuzja_vs_wstrzykiwanie/COCO_val2014_000000451305.jpg}
+%     \caption{}
+%     \label{fig:figure1}
+%   \end{subfigure}%
+%   \hfill
+%   \begin{subfigure}{0.33\textwidth}
+%     \includegraphics[width=\linewidth]{rezultaty/warstwy/fuzja_vs_wstrzykiwanie/COCO_val2014_000000389378.jpg}
+%     \caption{}
+%     \label{fig:figure2}
+%   \end{subfigure}%
+%   \hfill
+%   \begin{subfigure}{0.33\textwidth}
+%     \includegraphics[width=\linewidth]{rezultaty/warstwy/fuzja_vs_wstrzykiwanie/COCO_val2014_000000491497.jpg}
+%     \caption{}
+%     \label{fig:figure3}
+%   \end{subfigure}
+%   \caption{This is a test.}
+% \end{figure}

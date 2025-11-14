@@ -1,0 +1,30 @@
+\begin{table}
+\caption{Wyniki badań dla szerokości wiązki $k=3$, pogrubiono wynik referencyjny, kursywą oznaczono model z parametrami z artykułu referencyjnego, ponownie wytrenowany.}\label{tab:zmiana_ilosci_parametrow_modelu}
+\centering
+
+\resizebox{\textwidth}{!}{
+\begin{threeparttable}
+\begin{tabular}{|l|l|l|l|l|l|l|l|}
+\hline
+\textbf{\begin{tabular}[c]{@{}l@{}}Wariant komponentu \\ fuzji\end{tabular}~} & \textbf{\begin{tabular}[c]{@{}l@{}}Rozmiar \\ RNN\end{tabular}~}& 
+\textbf{RKA} & \textbf{RKPS}& \textbf{C} & \textbf{\begin{tabular}[c]{@{}l@{}}p(m)\end{tabular}} & \textbf{\%$\Delta$C\tnote{1}} & \textbf{\% $\Delta$\tnote{2}} \\ \hline
+\multirow{4}{*}{dodawanie} & \textbf{256} & \textbf{256} & \textbf{256} & \textbf{78,13} & \textbf{25,2} & \textbf{} &  \\ \cline{2-8} 
+ & 128 & 128 & 128 & 74,92 & 23,7 & 4,11 & 5,95 \\ \cline{2-8} 
+ & 256 & 256 & - & 78,55 & 25,18 & -0,54 & 0,08 \\ \cline{2-8} 
+ & 512 & 512 & 512 & 82,48 & 28,82 & -5,57 & -14,37 \\ \hline
+\multirow{9}{*}{konkatenacja} & 512 & 512 & - & 75,86 & 32,29 & 2,91 & -28,13 \\ \cline{2-8} 
+ & 256 & - & - & 75,93 & 25,56 & 2,82 & -1,43 \\ \cline{2-8} 
+ & 256 & - & 512 & 78,71 & 26,66 & -0,74 & -5,79 \\ \cline{2-8} 
+ & 512 & 512 & 1024 & 79,05 & 33,35 & -1,18 & -32,34 \\ \cline{2-8} 
+ & 256 & 256 & - & 79,07 & 27,04 & -1,20 & -7,30 \\ \cline{2-8} 
+ & 128 & 128 & 256 & 80,44 & 24,68 & -2,96 & 2,06 \\ \cline{2-8} 
+ & 256 & 256 & 128 & 80,73 & 24,31 & -3,33 & 3,53 \\ \cline{2-8} 
+ & 256 & 256 & 256 & 81,85 & 25,32 & -4,76 & -0,48 \\ \cline{2-8} 
+ & 256 & 256 & 512 & 82,49 & 27,31 & -5,58 & -8,37 \\ \hline \end{tabular}
+ \begin{tablenotes}[par,flushleft]
+ \item [1] Procentowa różnica w ilości trenowanych parametrów modelu względem wytrenowanego wariantu bazowego
+ \item [2] Procentowa różnica metryki CIDEr względem wariantu bazowego, Kursywą oznaczono wartość referencyjną, a pogrubiono rezultaty z najwyższą wartością metryki CIDEr.
+ \end{tablenotes}
+\end{threeparttable}
+ }
+\end{table}

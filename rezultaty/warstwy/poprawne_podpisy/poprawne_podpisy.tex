@@ -1,0 +1,55 @@
+% \begin{table}
+% \caption{Zestawienie czterech obrazów o prawidłowo przewidzianych podpisach razem z wartością metryk. W modelu użyto sieci szkieletowej Xception i osadzeń słów GloVe.}\label{tab:poprawne_podpisy}
+% \resizebox{\textwidth}{!}{
+% \begin{tabular}{|l|l|l|l|l|}
+% \hline
+% \textbf{Obraz} & Obraz~\ref{fig:poprawne_podpisy_a} & Obraz~\ref{fig:poprawne_podpisy_d} & Obraz~\ref{fig:poprawne_podpisy_b} & Obraz~\ref{fig:poprawne_podpisy_c} \\ \hline
+% \textbf{\begin{tabular}[c]{@{}l@{}}Podpisy\\ referencyjne\end{tabular}} & \begin{tabular}[c]{@{}l@{}}*A young man riding a\\ skateboard down a street.\\ *A man riding a skateboard\\ down a road.\\ *A man skateboards down\\ a steep incline on an area\\ painted with graffiti.\\ *Man on a skateboard\\ crossing over some graffiti\\ *A man riding a skateboard\\ down a hill.\end{tabular} & \begin{tabular}[c]{@{}l@{}}*Horses walk along a beach\\ while boats ride at their\\ moorings offshore.\\ *Some people riding horses\\ on some sand and some boats\\ and water\\ *A group of people riding\\ horses on a beach.\\ *Some people are riding\\ horses along a shoreline.\\ *A group of people riding\\ horses on top of a sandy\\ beach.\end{tabular} & \begin{tabular}[c]{@{}l@{}}*A slice of pizza on a paper\\ plate.\\ *A slice of pizza being served\\ on a plate.\\ *A slice of pizza sits on the\\ paper plate\\ *The metal table has a slice\\ of pizza on a plate.\\ *A slice of pizza is sitting\\ on the top of a paper plate.\end{tabular} & \begin{tabular}[c]{@{}l@{}}*A red and gold painted fire\\ hydrant on the street\\ *A fire hydrant on the side \\ of the road\\ *A multicolored fire hydrant\\ that is on the sidewalk.\\ *A fire hydrant on the side \\ of a street.\\ *A fire hydrant is standing on\\ the sidewalk with two spouts.\end{tabular} \\ \hline
+% \textbf{\begin{tabular}[c]{@{}l@{}}Przewidziany \\ podpis\end{tabular}} & \begin{tabular}[c]{@{}l@{}}A man riding a\\ skateboard down a street\end{tabular} & \begin{tabular}[c]{@{}l@{}}A group of people riding\\ horses on a beach\end{tabular} & A slice of pizza on a plate & \begin{tabular}[c]{@{}l@{}}A fire hydrant on the side of\\ the street\end{tabular} \\ \hline
+% \textbf{B-1} & 100,00 & 100,00 & 70,00 & 100,00 \\ \hline
+% \textbf{B-2} & 100,00 & 100,00 & 68,31 & 100,00 \\ \hline
+% \textbf{B-3} & 100,00 & 100,00 & 66,32 & 94,99 \\ \hline
+% \textbf{B-4} & 100,00 & 100,00 & 63,89 & 91,93 \\ \hline
+% \textbf{M} & 41,35 & 14,28 & 15,11 & 28,97 \\ \hline
+% \textbf{C} & 482,15 & 419,35 & 411,58 & 479,30 \\ \hline
+% \textbf{R} & 93,13 & 100,00 & 79,37 & 88,89 \\ \hline
+% \end{tabular}}
+% \end{table}
+
+\begin{table}[htbp]
+\caption{Zestawienie obrazów o prawidłowo przewidzianych podpisach razem z wartością metryk. W modelu użyto sieci szkieletowej Xception i osadzeń słów GloVe.}
+\label{tab:poprawne_podpisy}
+\centering
+\begin{tabular}{|l|l|l|}
+\hline
+\textbf{Obraz} & Obraz~\ref{fig:poprawne_podpisy_a} & Obraz~\ref{fig:poprawne_podpisy_d} \\ \hline
+\textbf{\begin{tabular}[c]{@{}l@{}}Podpisy\\ referencyjne\end{tabular}} & \begin{tabular}[c]{@{}l@{}}*A young man riding a\\ skateboard down a street.\\ *A man riding a skateboard\\ down a road.\\ *A man skateboards down\\ a steep incline on an area\\ painted with graffiti.\\ *Man on a skateboard\\ crossing over some graffiti\\ *A man riding a skateboard\\ down a hill.\end{tabular} & \begin{tabular}[c]{@{}l@{}}*Horses walk along a beach\\ while boats ride at their\\ moorings offshore.\\ *Some people riding horses\\ on some sand and some boats\\ and water\\ *A group of people riding\\ horses on a beach.\\ *Some people are riding\\ horses along a shoreline.\\ *A group of people riding\\ horses on top of a sandy\\ beach.\end{tabular} \\ \hline
+\textbf{\begin{tabular}[c]{@{}l@{}}Przewidziany \\ podpis\end{tabular}} & \begin{tabular}[c]{@{}l@{}}A man riding a\\ skateboard down a street\end{tabular} & \begin{tabular}[c]{@{}l@{}}A group of people riding\\ horses on a beach\end{tabular} \\ \hline
+\textbf{B-1} & 100,00 & 100,00 \\ \hline
+\textbf{B-2} & 100,00 & 100,00 \\ \hline
+\textbf{B-3} & 100,00 & 100,00 \\ \hline
+\textbf{B-4} & 100,00 & 100,00 \\ \hline
+\textbf{M} & 41,35 & 14,28 \\ \hline
+\textbf{C} & 482,15 & 419,35 \\ \hline
+\textbf{R} & 93,13 & 100,00 \\ \hline
+\end{tabular}
+\end{table}
+
+\begin{table}[htbp]
+\ContinuedFloat
+\caption{Zestawienie obrazów cd. o prawidłowo przewidzianych podpisach razem z wartością metryk. W modelu użyto sieci szkieletowej Xception i osadzeń słów GloVe.}
+\centering
+\begin{tabular}{|l|l|l|}
+\hline
+\textbf{Obraz} & Obraz~\ref{fig:poprawne_podpisy_b} & Obraz~\ref{fig:poprawne_podpisy_c} \\ \hline
+\textbf{\begin{tabular}[c]{@{}l@{}}Podpisy\\ referencyjne\end{tabular}} & \begin{tabular}[c]{@{}l@{}}*A slice of pizza on a paper\\ plate.\\ *A slice of pizza being served\\ on a plate.\\ *A slice of pizza sits on the\\ paper plate\\ *The metal table has a slice\\ of pizza on a plate.\\ *A slice of pizza is sitting\\ on the top of a paper plate.\end{tabular} & \begin{tabular}[c]{@{}l@{}}*A red and gold painted fire\\ hydrant on the street\\ *A fire hydrant on the side \\ of the road\\ *A multicolored fire hydrant\\ that is on the sidewalk.\\ *A fire hydrant on the side \\ of a street.\\ *A fire hydrant is standing on\\ the sidewalk with two spouts.\end{tabular} \\ \hline
+\textbf{\begin{tabular}[c]{@{}l@{}}Przewidziany \\ podpis\end{tabular}} & A slice of pizza on a plate & \begin{tabular}[c]{@{}l@{}}A fire hydrant on the side of\\ the street\end{tabular} \\ \hline
+\textbf{B-1} & 70,00 & 100,00 \\ \hline
+\textbf{B-2} & 68,31 & 100,00 \\ \hline
+\textbf{B-3} & 66,32 & 94,99 \\ \hline
+\textbf{B-4} & 63,89 & 91,93 \\ \hline
+\textbf{M} & 15,11 & 28,97 \\ \hline
+\textbf{C} & 411,58 & 479,30 \\ \hline
+\textbf{R} & 79,37 & 88,89 \\ \hline
+\end{tabular}
+\end{table}

@@ -1,0 +1,18 @@
+\begin{table}
+\caption{Przykładowe przewidziane podpisy i osiągnięte rezultaty dla obrazu~\ref{fig:przewidziane_f}~\cite{Bartosiewicz2024Optimal}.}
+\label{tab:porownanie_przewidzianych_podpisow_zyrafa}
+\resizebox{\textwidth}{!}{
+\begin{tabular}{|ll|l|}
+\hline
+\multicolumn{1}{|l|}{} & \textbf{C} & \textbf{Przewidziany podpis} \\ \hline
+\multicolumn{1}{|l|}{\begin{tabular}[c]{@{}l@{}}\textit{Sieć szkieletowa:} Xception; \textit{Metoda fuzji:} konkatenacja;\\ \textit{Komponent przewidywania słowa:} 512; \textit{adaptation component:} 0,\\ \textit{RNN:} LSTM\end{tabular}} & 222,34 & A giraffe standing in a field next to a tree. \\ \hline
+\multicolumn{1}{|l|}{\begin{tabular}[c]{@{}l@{}}\textit{Sieć szkieletowa:} VGG16; \textit{Metoda fuzji:} konkatenacja;\\ \textit{Komponent przewidywania słowa:} 256; \textit{RNN:} LSTM\end{tabular}} & 172,00 & A giraffe standing next to a tree in a park. \\ \hline
+\multicolumn{1}{|l|}{\begin{tabular}[c]{@{}l@{}}\textit{Sieć szkieletowa:} Xception; \textit{Metoda fuzji:}konkatenacja;\\ \textit{Komponent przewidywania słowa:} 256; \textit{RNN:} GRU\end{tabular}} & 161,28 & A giraffe standing in a dirt field next to a building. \\ \hline
+\multicolumn{1}{|l|}{\begin{tabular}[c]{@{}l@{}}\textit{Sieć szkieletowa:} MobilenetV2; \textit{Metoda fuzji:} konkatenacja;\\ \textit{Komponent przewidywania słowa:} 256; \textit{RNN: }LSTM\end{tabular}} & 151,62 & A giraffe standing in a fenced in area. \\ \hline
+\multicolumn{1}{|l|}{\begin{tabular}[c]{@{}l@{}}\textit{Sieć szkieletowa:} Resnet50; \textit{Metoda fuzji:} konkatenacja;\\ \textit{Komponent przewidywania słowa:} 256; \textit{RNN:} LSTM\end{tabular}} & \np{141,94} & A giraffe standing next to a zebra in a zoo. \\ \hline
+\multicolumn{1}{|l|}{\begin{tabular}[c]{@{}l@{}}\textit{Sieć szkieletowa:} Xception; \textit{Metoda fuzji:} konkatenacja;\\ \textit{Komponent przewidywania słowa:} 512; \textit{RNN:} GRU\end{tabular}} & 129,34 & A giraffe standing next to a zebra in a field. \\ \hline
+\multicolumn{1}{|l|}{\begin{tabular}[c]{@{}l@{}}\textit{Sieć szkieletowa:} InceptionV3; \textit{Metoda fuzji:} konkatenacja;\\ \textit{Komponent przewidywania słowa:} 256; \textit{RNN: }LSTM\end{tabular}} & 128,51 & A giraffe standing next to a wooden fence. \\ \hline
+\multicolumn{1}{|l|}{\begin{tabular}[c]{@{}l@{}}\textit{Sieć szkieletowa:} Xception; \textit{Metoda fuzji:} konkatenacja;\\ \textit{Komponent przewidywania słowa:} 512; \textit{RNN:} LSTM\end{tabular}} & 93,93 & A couple of giraffe standing next to each other. \\ \hline
+\multicolumn{2}{|l|}{\textit{Podpisy referencyjne}} & \begin{tabular}[c]{@{}l@{}}A giraffe standing outside of a building next to a tree,\\ A giraffe standing in a small piece of shade,\\ A giraffe finds some sparse shade in his habitat,\\ Giraffe standing in a holding pen near a tree stump,\\ A giraffe in a zoo enclosure next to a barn,\end{tabular} \\ \hline
+\end{tabular}}
+\end{table}

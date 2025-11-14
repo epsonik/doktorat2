@@ -1,0 +1,13 @@
+\begin{table}
+\caption{Przykładowe obrazy wraz z przewidzianymi podpisami i osiągniętymi rezultatami metryk dla obrazów z Rysunku~\ref{fig:przewidziane_obrazy}.}
+\label{tab:porownanie_przewidzianych_podpisow}
+\resizebox{\textwidth}{!}{
+\begin{tabular}{|l|l|l|l|l|l|l|l|l|}
+\hline
+\textbf{\begin{tabular}[c]{@{}l@{}}Sieć \\ szkieletowa\end{tabular}} & \textbf{Obraz} & \textbf{B-1} & \textbf{B-2} & \textbf{B-3} & \textbf{B-4} & \textbf{C} & \textbf{Przewidziany podpis} & \textbf{Podpisy referencyjne} \\ \hline
+Densenet121 & Obraz~\ref{fig:przewidziane_obrazy_a} & 79,54 & \np{73,06} & 64,87 & 53,42 & 159,42 & \begin{tabular}[c]{@{}l@{}}A man riding skis down\\ a snow covered slope.\end{tabular} & \begin{tabular}[c]{@{}l@{}}A man on skis is posing on a ski\\ slope, \\ A person on a ski mountain posing\\ for the camera, \\ A man n a red coat stands on the\\ snow on skis.\\ A man riding skis on top of a snow\\ covered slope.\\ A lady is in her ski gear in the snow.\end{tabular} \\ \hline
+Resnet152V2 & Obraz~\ref{fig:przewidziane_obrazy} & 60 & 44,72 & 0 & 0 & \np{83,88} & \begin{tabular}[c]{@{}l@{}}A dog jumping in the\\ air to catch a frisbee.\end{tabular} & \begin{tabular}[c]{@{}l@{}}A very cute brown dog with a disc\\ in its mouth.\\ A dog running in the grass with\\ a frisbee\\ in his mouth, \\ A dog carrying a Frisbee in its\\ mouth running on a grass lawn, \\ A dog in a grassy field carrying\\ a frisbee.\\ A brown dog walking across a green\\ field with\\ a frisbee in its mouth.\end{tabular} \\ \hline
+VGG19 & Obraz~\ref{fig:przewidziane_obrazy_c} & 100 & 84,52 & \np{61,98} & 75,00 & \np{184,89} & \begin{tabular}[c]{@{}l@{}}A bathroom with\\ a toilet and a sink.\end{tabular} & \begin{tabular}[c]{@{}l@{}}A bathroom with a sink, toilet and\\ vanity.\\ Tiled bathroom with a couple towels\\ hanging up\\ An old bathroom with a black marble\\ sink.\\ A bathroom with a black sink counter\\ next\\ to a white toilet.\\ The corner of a bathroom with light\\ mint green walls above the tile.\end{tabular} \\ \hline
+Mobilenet & Obraz~\ref{fig:przewidziane_obrazy_b} & 75,00 & \np{46,29} & 0 & 0 & \np{120,58} & \begin{tabular}[c]{@{}l@{}}A kitchen with a stove\\ and a microwave.\end{tabular} & \begin{tabular}[c]{@{}l@{}}A microwave is sitting idly in the\\ kitchen, \\ A shiny silver metal microwave near\\ wooden cabinets.\\ There are wooden cabinets that have\\ a microwave attached at the bottom\\ of it A microwave sitting next to and\\ underneath kitchen cupboards.\\ A kitchen scene with focus on\\ a silver microwave.\end{tabular} \\ \hline
+\end{tabular}}
+\end{table}

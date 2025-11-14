@@ -1,0 +1,46 @@
+\begin{figure}[ht!]
+    \centering
+    \begin{subfigure}[b]{0.48\textwidth}
+        \adjincludegraphics[width=\textwidth, trim={0 0 0 {1.1\textwidth}},clip]{rezultaty/warstwy/beam_search/335885.jpg}
+        \caption{ID=335885}
+        \label{fig:niski_cider_poprawny_podpis_wstrzykiwanie_wstepne_a}
+    \end{subfigure}
+    \hfill 
+    \begin{subfigure}[b]{0.48\textwidth}
+        \includegraphics[width=\textwidth]{rezultaty/warstwy/beam_search/271576.jpg}
+        \caption{ID=271576}
+        \label{fig:niski_cider_poprawny_podpis_wstrzykiwanie_wstepne_b} 
+    \end{subfigure}
+    
+    \vspace{1em}
+
+    \begin{subfigure}[b]{0.48\textwidth}
+        \includegraphics[width=\textwidth]{rezultaty/warstwy/beam_search/302599.jpg}
+        \caption{ID=302599}
+        \label{fig:niski_cider_poprawny_podpis_wstrzykiwanie_wstepne_c} 
+    \end{subfigure}
+    \hfill 
+    \begin{subfigure}[b]{0.48\textwidth}
+        \includegraphics[width=\textwidth]{rezultaty/warstwy/beam_search/225792.jpg}
+        \caption{ID=225792}
+        \label{fig:niski_cider_poprawny_podpis_wstrzykiwanie_wstepne_d} 
+    \end{subfigure}
+
+    \caption{Przykładowe obrazy dla Tabeli~\ref{tab:niski_cider_poprawny_podpis_wstrzykiwanie_wstepne}.}\label{fig:niski_cider_poprawny_podpis_wstrzykiwanie_wstepne}
+\end{figure}
+
+
+
+\begin{table}
+\caption{Zestawienie czterech obrazów z przewidzianymi podpisami oraz rezultatami metryk z użyciem rozmiaru wiązki $k=5$. Obrazy referencyjne przedstawiono na Rysunku~\ref{fig:niski_cider_poprawny_podpis_wstrzykiwanie_wstepne}.}
+\label{tab:niski_cider_poprawny_podpis_wstrzykiwanie_wstepne}
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{|l|l|l|l|l|l|l|l|l|l|}
+\hline
+\textbf{Obraz} & \textbf{\begin{tabular}[c]{@{}l@{}}Podpisy\\referencyjne\end{tabular}}& \textbf{\begin{tabular}[c]{@{}l@{}}Konfiguracja\\ modelu\end{tabular}}& \textbf{\begin{tabular}[c]{@{}l@{}}Przewidziany\\ podpis\end{tabular}} & \textbf{B-1} & \textbf{B-2} &\textbf{ B-3} & \textbf{B-4 }& \textbf{C}  & \textbf{R} \\ \hline
+\textbf{~\ref{fig:niski_cider_poprawny_podpis_wstrzykiwanie_wstepne_a}}    & \begin{tabular}[c]{@{}l@{}}A parking meter sitting on the\\ side of a sidewalk.\\ An empty parking next to a\\ stone wall.\\ A parking meter near an outdoor\\ building.\\ A blank white brick wall stands\\ behind a parking meter.\\ A meter and parking with on.\end{tabular}    & \begin{tabular}[c]{@{}l@{}}\textbf{Sieć szkieletowa:}\\ Resnet152\\ \textbf{Stan ukryty LSTM:}\\ 512\end{tabular}     &\begin{tabular}[c]{@{}l@{}} A meter and parking\\ with on. \end{tabular}      & 71,43 & 0& 0& 0& 115,35& 42,86  \\ \hline
+\textbf{~\ref{fig:niski_cider_poprawny_podpis_wstrzykiwanie_wstepne_b}}     & \begin{tabular}[c]{@{}l@{}}A white dog is standing in a\\ small boat.\\ Dog in a flat boat barking at\\ what he sees.\\ Two dogs are pictured but only\\ one of them is in the boat.\\ A dog standing in a small boat\\ in the water.\\ A dog standing on top of a boat\\ in a body of water.\end{tabular}    & \begin{tabular}[c]{@{}l@{}}\textbf{Sieć szkieletowa:}\\ Resnet152\\ \textbf{Stan ukryty LSTM:}\\ 512\end{tabular}     & \begin{tabular}[c]{@{}l@{}}A of and\\ dog a and boat in of.\end{tabular}     & 77,78 & 31,18 & 0& 0& 143,53& 55,71  \\ \hline
+\textbf{~\ref{fig:niski_cider_poprawny_podpis_wstrzykiwanie_wstepne_c}}    & \begin{tabular}[c]{@{}l@{}}Boys skateboarding over a\\ rusty car onto platforms with\\ an audience watching.\\ Skateboarders are doing\\ tricks as a crowd watches.\\ Some skateboarders doing\\ tricks and people watching them.\\ A group of kids doing stunts at\\ a skating event.\\ A group of teens performing\\ stunts at a skateboard park.\end{tabular} & \begin{tabular}[c]{@{}l@{}}\textbf{Sieć szkieletowa:}\\ Resnet152\\ \textbf{Stan ukryty LSTM:}\\ 512\end{tabular} & \begin{tabular}[c]{@{}l@{}}A man jumping in\\ the air.\end{tabular}  & 24,77 & 0& 0& 0& 0& 22,80  \\ \hline
+\textbf{~\ref{fig:niski_cider_poprawny_podpis_wstrzykiwanie_wstepne_d}}    & \begin{tabular}[c]{@{}l@{}}Motor officer on roadway\\ during a parade in the city.\\ A man on a motorcycle\\ leading a parade.\\ The motorcycle officer is\\ heading the city parade.\\ A cop riding on top of\\ a motorcycle.\\ A police officer riding his\\ motorcycle in a parade.\end{tabular}  & \begin{tabular}[c]{@{}l@{}}\textbf{Sieć szkieletowa:}\\ Resnet152\\ \textbf{Stan ukryty LSTM:}\\ 512\end{tabular} & \begin{tabular}[c]{@{}l@{}} A gang of bikers down\\ the street. \end{tabular} & 23,88 & 0& 0& 0& 0& 27,85  \\ \hline
+\end{tabular}}
+\end{table}
