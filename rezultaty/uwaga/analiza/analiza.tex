@@ -1,0 +1,39 @@
+\begin{table}[htbp]
+    \centering
+\begin{minipage}[c]{0.55\linewidth}
+
+        \includegraphics[width=\linewidth]{rezultaty/uwaga/analiza/COCO_val2014_000000227220.jpg}
+        \caption{}\label{fig:analiza}
+\end{minipage}
+    \begin{minipage}[c]{0.42\linewidth}
+        \small 
+        \RaggedRight 
+        \textbf{Podpisy referencyjne:}\\
+        The kitchen has stainless steel appliances with only one white door\\
+        A kitchen with stainless steel appliances and counters\\
+        A kitchen with a white tile wall and a chrome counter with a built in oven\\
+        A beautiful high end stainless steel commercial kitchen\\
+        A kitchen with a stove shelves and various cabinets
+    \end{minipage}
+    
+    \vspace{2em}
+    \vspace{1em}  
+    
+    \caption{Analiza jakościowa i ilościowa dla przykładowego obrazu. Tabela przedstawia wyniki metryk dla podpisów wygenerowanych przez modele z różnymi mechanizmami uwagi i siecią szkieletową Resnet152.}\label{tab:analiza}
+    \begin{tabularx}{\textwidth}{l cccccc X}
+        \toprule
+        \textbf{\begin{tabular}[c]{@{}l@{}}Rodzaj\\ mechanizmu\\ uwagi\end{tabular}} & \textbf{B-1} & \textbf{B-2} & \textbf{B-3} & \textbf{B-4} & \textbf{C} & \textbf{R} & \textbf{Przewidziany podpis} \\
+        \midrule
+        \begin{tabular}[c]{@{}l@{}}Uwaga\\ adaptacyjna~\ref{fig:COCO_val2014_000000227220_adaptive_Resnet152_decoder_dim_512_fine_tune_encoder_true_fine_tune_embeddings_true-epoch-33}\end{tabular} & 87,50 & 79,06 & 67,86 & 59,46 & 97,67 & 69,85 & A white stove top oven sitting inside of a kitchen\\
+        \begin{tabular}[c]{@{}l@{}}Uwaga\\ miękka~\ref{fig:COCO_val2014_000000227220_att2all_Resnet152_decoder_dim_512_fine_tune_encoder_true_fine_false_embeddings_true-epoch-33}\end{tabular}  & 87,50 & 79,06 & 67,86 & 59,46 & 103,71 & 69,85 & A stove top oven sitting inside of a kitchen\\
+        \begin{tabular}[c]{@{}l@{}}Uwaga\\ przestrzenna~\ref{fig:COCO_val2014_000000227220_spatial_Resnet152_decoder_dim_512_fine_tune_encoder_true_fine_tune_embeddings_true-epoch-31}\end{tabular}  & 77,78 & 62,36 & 55,03 & 48,55 & 87,19 & 66,67 & A white stove top oven sitting inside of a kitchen\\
+        \begin{tabular}[c]{@{}l@{}}Uwaga własna~\ref{fig:COCO_val2014_000000227220_resnet152_aoanet}\end{tabular}      & 87,50 & 79,06 & 67,86 & 59,46 & 97,67 & 69,85 & A kitchen with a stove and a stove \\
+        \bottomrule
+    \end{tabularx}
+
+\end{table}
+
+\input{rezultaty/uwaga/mapy_ciepla/adaptive_Resnet152_decoder_dim_512_fine_tune_encoder_true_fine_tune_embeddings_true-epoch-33/COCO_val2014_000000227220_adaptive_Resnet152_decoder_dim_512_fine_tune_encoder_true_fine_tune_embeddings_true-epoch-33}
+\input{rezultaty/uwaga/mapy_ciepla/att2all_Resnet152_decoder_dim_512_fine_tune_encoder_true_fine_false_embeddings_true-epoch-33/COCO_val2014_000000227220_att2all_Resnet152_decoder_dim_512_fine_tune_encoder_true_fine_false_embeddings_true-epoch-33}
+\input{rezultaty/uwaga/mapy_ciepla/spatial_Resnet152_decoder_dim_512_fine_tune_encoder_true_fine_tune_embeddings_true-epoch-31/COCO_val2014_000000227220_spatial_Resnet152_decoder_dim_512_fine_tune_encoder_true_fine_tune_embeddings_true-epoch-31}
+\input{rezultaty/uwaga/mapy_ciepla/resnet152_aoanet/COCO_val2014_000000227220_resnet152_aoanet}

@@ -1,0 +1,17 @@
+\begin{table}
+
+\centering
+\fontsize{10pt}{10pt}\selectfont
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{|l|l|l|l|l|l|l|l|}
+\hline
+\textbf{\begin{tabular}[c]{@{}l@{}}WERSJA \\KONFIGURACJI\end{tabular} } & \textbf{\begin{tabular}[c]{@{}l@{}}BAZOWA\\ SIEĆ CNN \end{tabular} } & \textbf{\%$\Delta$ B-1} & \textbf{\%$\Delta$ B-2} & \textbf{\%$\Delta$ B-3} & \textbf{$\Delta$ B-4} & \textbf{\%$\Delta$ R} & \textbf{\%$\Delta$ C} \\ \hline
+
+\begin{tabular}[c]{@{}l@{}}Dostrajanie osadzeń \\ słów\end{tabular}  
+ & \multirow{2}{*}{Resnet101} & -0,33 & -0,33 & -0,1 & 0,59 & 0,26 & 4,15 \\ \cline{1-1} \cline{3-8} 
+\begin{tabular}[c]{@{}l@{}}Dostrajanie osadzeń \\słów oraz bazowej sieci CNN\end{tabular}&  & 2,28 & 2,28 & 3,15 & 3,47 & 2,15 & 12,45 \\ \hline \hline
+\begin{tabular}[c]{@{}l@{}}Dostrajanie osadzeń \\słów\end{tabular} & \multirow{2}{*}{Densenet201} & 1,23 & 1,23 & 1,45 & 1,47 & 0,8 & 2,55 \\ \cline{1-1} \cline{3-8} 
+\begin{tabular}[c]{@{}l@{}}Dostrajanie osadzeń \\słów oraz bazowej sieci CNN\end{tabular} &  & 3,63 & 3,63 & 4,09 & 3,86 & 2,88 & 12,14 \\ \hline
+\end{tabular}}
+\caption{Czy warto uczyć osadzenia słów od pierwszej epoki? Wyniki badań na zbiorze MSCOCO 2014 dla k=5. bez uczenia kodera CNN. dla uwagi miękkiej.}\label{res:douczanie}
+\end{table}

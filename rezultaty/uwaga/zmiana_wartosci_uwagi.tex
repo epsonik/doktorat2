@@ -1,0 +1,39 @@
+\begin{table}
+\caption{Zmiana wartości metryki CIDEr dla wariantów mechanizmu uwagi. Kolumny ($\mathbf{\%\Delta}$\textbf{C}) oraz ($\mathbf{\%\Delta p(mln)}$) prezentują procentową zmianę odpowiednio metryki CIDEr oraz liczby parametrów względem modelu referencyjnego oznaczonego kursywą, uzyskaną przez wytrenowane.
+}\label{tab:zmiana_wartosci_uwagi}
+\centering
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{|l|l|l|l|l|l|}
+\hline
+\textbf{\begin{tabular}[c]{@{}l@{}}Rodzaj\\ mechanizmu\\ uwagi\end{tabular}~} & \textbf{\begin{tabular}[c]{@{}l@{}}Sieć\\ szkieletowa \end{tabular}~}  & \textbf{C} & \textbf{p(mln)} & \textbf{\%$\Delta$ C }& \textbf{\%$\Delta$ p(mln)} \\ \hline
+\multirow{7}{*}{Uwaga adaptacyjna} & \textit{Resnet152} & \textit{104,48} & \textit{68,29} &  &  \\ \cline{2-6} 
+ & \textbf{Regnet16} & \textbf{106,97} & \textbf{91,73} & \textbf{2,38} & \textbf{34,32} \\ \cline{2-6} 
+ & InceptionV3 & 105,02 & 32,15 & 0,51 & -52,91 \\ \cline{2-6} 
+ & Densenet201 & 103,00 & 28,35 & -1,42 & -58,49 \\ \cline{2-6} 
+ & Densenet161 & 100,54 & 36,96 & -3,78 & -45,88 \\ \cline{2-6} 
+ & Densenet121 & 100,26 & 16,48 & -4,04 & -75,86 \\ \cline{2-6} 
+ & Resnet101 & 99,54 & 52,64 & -4,73 & -22,91 \\ \hline \hline
+\multirow{7}{*}{Uwaga przestrzenna} & \textit{Resnet152} & \textit{102,38 }&\textit{ 68,29 }&  &  \\ \cline{2-6} 
+ & \textbf{Regnet16} & \textbf{105,89} & \textbf{91,73} & \textbf{3,43} & \textbf{34,32} \\ \cline{2-6} 
+ & Densenet201 & 103,18 & 28,35 & 0,78 & -58,49 \\ \cline{2-6} 
+ & InceptionV3 & 102,46 & 32,15 & 0,08 & -52,91 \\ \cline{2-6} 
+ & Densenet161 & 100,40 & 36,96 & -1,93 & -45,88 \\ \cline{2-6} 
+ & Resnet101 & 99,79 & 52,64 & -2,53 & -22,91 \\ \cline{2-6} 
+ & Densenet121 & 99,77 & 16,48 & -2,55 & -75,86 \\ \hline \hline
+\multirow{7}{*}{Uwaga miękka} & \textit{Resnet101} & \textit{104,83} & \textit{59,33} &  &  \\ \cline{2-6} 
+ & \textbf{Densenet201} & \textbf{108,96} & \textbf{34,66} & \textbf{3,94} & \textbf{-41,58} \\ \cline{2-6} 
+ & ResNet152 & 108,52 & 72,13 & 3,52 & 21,57 \\ \cline{2-6} 
+ & InceptionV3 & 108,12 & 35,99 & 3,14 & -39,33 \\ \cline{2-6} 
+ & Densenet161 & 107,52 & 41,26 & 2,57 & -30,46 \\ \cline{2-6} 
+ & Densenet121 & 103,37 & 17,35 & -1,39 & -70,76 \\ \cline{2-6} 
+ & Regnet16 & 92,74 & 85,13 & -11,53 & 43,48 \\ \hline \hline
+
+ \multirow{7}{*}{Uwaga własna} &  \textit{Resnet101} & \textit{110,66} & \textit{129,87} &  &  \\ \cline{2-6} 
+& \textbf{Regnet16} & \textbf{117,60} & \textbf{168,93} & \textbf{6,27} & \textbf{30,08} \\ \cline{2-6} 
+& Resnet152 & 108,92 & 145,51 & -1,57 & 12,05 \\ \cline{2-6} 
+& Densenet201 & 100,65 & 105,33 & -9,04 & -18,89 \\ \cline{2-6} 
+& Densenet121 & 98,45 & 94,20 & -11,04 & -27,47 \\ \cline{2-6} 
+& Densenet161 & 95,30 & 114,01 & -13,89 & -12,22 \\ \cline{2-6} 
+& InceptionV3 & 84,51 & 112,48 & -23,63 & -13,39 \\ \hline
+\end{tabular}}
+\end{table}

@@ -1,0 +1,40 @@
+\begin{table}[htbp]
+\centering
+\begin{minipage}[c]{0.45\linewidth}
+
+ \includegraphics[width=\linewidth]{rezultaty/uwaga/porownanie_z_klasycznym/COCO_val2014_000000172733.jpg}
+ \caption{}\label{fig:porownanie_z_klasycznym}
+\end{minipage}
+\hfill
+\begin{minipage}[c]{0.5\linewidth}
+\small
+ \RaggedRight
+ \textbf{Podpisy referencyjne:}\par\vspace{0.5em}
+ A man holding a kite at the park.\\
+ A man that is standing in the grass with a kite.\\
+ A man that is holding a large red and black kite.\\
+ A man holding a kite in a park.\\
+ A man holding on a red and black kite in the park.
+\end{minipage}
+
+\vspace{2em}
+ \caption{Zestawienie zdań przewidzianych przez modele z uwagą oraz podstawowe modele koder-dekoder.}\label{tab:analiza_nowy_przyklad_uproszczona}
+\begin{tabularx}{\textwidth}{ll cc X}
+ \toprule
+ \textbf{\begin{tabular}[c]{@{}l@{}}Rodzaj\\ metody\end{tabular}} & \textbf{\begin{tabular}[c]{@{}l@{}}Sieć\\ szkieletowa\end{tabular}} & \textbf{C} & \textbf{R} & \textbf{Przewidziany podpis} \\
+ \midrule
+ Uwaga przestrzenna~\ref{fig:COCO_val2014_000000172733_spatial_Regnet16_decoder_dim_512_fine_tune_encoder_false_fine_tune_embeddings_false-epoch-20} & Regnet16 & 2,29 & 0,64 & A man holding a kite while standing in a field\\
+ Uwaga miękka~\ref{fig:COCO_val2014_000000172733_att2all_DenseNet201_decoder_dim_512_attention_dim_512_fine_tune_encoder_false_no_emb-epoch-8} & Densenet201 & 4,19 & 1 & A man standing in a field holding a kite. \\
+ Uwaga własna~\ref{fig:COCO_val2014_000000172733_resnet101_aoanet} & Resnet101 & 4,19 & 1 & A man stnding in a field holding a kite. \\
+ Uwaga adaptacyjna~\ref{fig:COCO_val2014_000000172733_adaptive_Regnet16_decoder_dim_512_fine_tune_encoder_false_fine_tune_embeddings_false-epoch-28} & Regnet16 & 2,29 & 0,64 & A man standing in a field holding a kite.\\
+ Fuzja & Xception & 2,63 & 0,67 & A woman holding a kite in the grass. \\
+\begin{tabular}[c]{@{}l@{}}Wstrzykiwanie\\ wstępne\end{tabular}& InceptionV3 & 1,48 & 0,59 & A man a and man a and kite a. \\
+ \bottomrule
+\end{tabularx}
+\end{table}
+
+
+\input{rezultaty/uwaga/mapy_ciepla/spatial_Regnet16_decoder_dim_512_fine_tune_encoder_false_fine_tune_embeddings_false-epoch-20/COCO_val2014_000000172733_spatial_Regnet16_decoder_dim_512_fine_tune_encoder_false_fine_tune_embeddings_false-epoch-20}
+\input{rezultaty/uwaga/mapy_ciepla/att2all_DenseNet201_decoder_dim_512_attention_dim_512_fine_tune_encoder_false_no_emb-epoch-8/COCO_val2014_000000172733_att2all_DenseNet201_decoder_dim_512_attention_dim_512_fine_tune_encoder_false_no_emb-epoch-8}
+\input{rezultaty/uwaga/mapy_ciepla/resnet101_aoanet/COCO_val2014_000000172733_resnet101_aoanet}
+\input{rezultaty/uwaga/mapy_ciepla/adaptive_Regnet16_decoder_dim_512_fine_tune_encoder_false_fine_tune_embeddings_false-epoch-28/COCO_val2014_000000172733_adaptive_Regnet16_decoder_dim_512_fine_tune_encoder_false_fine_tune_embeddings_false-epoch-28}

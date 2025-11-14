@@ -1,0 +1,63 @@
+\begin{table}[htbp]
+    \centering
+    \begin{minipage}[c]{0.55\linewidth}
+        \includegraphics[width=\linewidth]{rezultaty/uwaga/analiza/COCO_val2014_000000285645.jpg}
+        \caption{}\label{fig:analiza_niski_cider}
+    \end{minipage}
+    \hfill 
+    \begin{minipage}[c]{0.42\linewidth}
+        \small
+        \RaggedRight 
+        \textbf{Podpisy referencyjne:}\par\vspace{0.5em} 
+        A person riding skis holding on to a parachute\\
+        A person skiing while holding onto some wires\\
+        A man wearing skis and holding a handle leans toward a sandy plain\\
+        A skiier is leaning over to the side holding into a set of \texttt{<unk>} cables\\
+        A snow skier is falling down is holding onto a suspension cable
+    \end{minipage}
+    
+    \vspace{2em}
+        \caption{Zestawienie przewidzianych podpisów, gdzie CIDEr ma relatywnie niską wartość, przy jednoczesnej wysokiej ilości tokenów wspólnych z podpisami referencyjnymi. }\label{tab:analiza_niski_cider}
+\begin{tabularx}{\textwidth}{ll cc X}
+        \toprule
+        \textbf{\begin{tabular}[c]{@{}l@{}}Rodzaj\\ mechanizmu\\ uwagi\end{tabular}} & \textbf{\begin{tabular}[c]{@{}l@{}}Sieć\\ szkieletowa\end{tabular}} & \textbf{C} & \textbf{R} & \textbf{Przewidziany podpis} \\
+        \midrule
+        \multirow{3}{*}{\begin{tabular}[c]{@{}l@{}} Uwaga\\adaptacyjna\end{tabular}} 
+        & Densenet121~\ref{fig:COCO_val2014_000000285645_adaptive_DenseNet121_decoder_dim_512_fine_tune_encoder_false_fine_tune_embeddings_false-epoch-11} & 13,46 & 35,78 & A man riding skis on top of a body of water. \\
+        & Densenet201~\ref{fig:COCO_val2014_000000285645_adaptive_DenseNet201_decoder_dim_512_fine_tune_encoder_true_fine_tune_embeddings_true-epoch-17} & 13,46 & 35,78 & A man riding a snowboard down a snow covered slope.\\
+        & InceptionV3~\ref{fig:COCO_val2014_000000285645_adaptive_att_InceptionV3_decoder_dim_512_attention_dim_512_fine_tune_encoder_true_fine_false_embeddings_true-epoch-33}   & 35,68 & 44,44 & A man riding skis down a snow covered slope \\
+        \midrule
+        \multirow{3}{*}{\begin{tabular}[c]{@{}l@{}} Uwaga\\własna\end{tabular}} 
+        & Densenet121~\ref{fig:COCO_val2014_000000285645_densenet121_aoanet} & 35,76 & 44,44 & A man riding ski down a snow covered slope \\
+        & Densenet201~\ref{fig:COCO_val2014_000000285645_densenet201_aoanet} & 35,76 & 44,44 & A young child riding skis down a snow covered slope \\
+        & InceptionV3~\ref{fig:COCO_val2014_000000285645_inception_aoanet}   & 35,76 & 44,44 & A person on a snowboard is rifing down a snowy hill. \\
+        \midrule
+        \multirow{3}{*}{\begin{tabular}[c]{@{}l@{}} Uwaga\\miękka\end{tabular}} 
+        & Densenet121~\ref{fig:COCO_val2014_000000285645_att2all_DenseNet121_decoder_dim_512_fine_tune_encoder_true_fine_false_embeddings_true-epoch-41} & 35,68 & 44,44 & A man riding skis down a snow covered slope\\
+        & Densenet201~\ref{fig:COCO_val2014_000000285645_att2all_DenseNet201_decoder_dim_512_attention_dim_512_fine_tune_encoder_false_no_emb-epoch-8} & 13,46 & 35,78 & A man riding skis down a snow covered slope.\\
+        & InceptionV3~\ref{fig:COCO_val2014_000000285645_att2all_Inception_decoder_dim_512_attention_dim_512_fine_tune_encoder_true_fine_tune_embeddings_true-epoch-39}   & 35,34 & 50,92 & A man in a blue jacket is skiing in the snow\\
+        \midrule
+        \multirow{3}{*}{\begin{tabular}[c]{@{}l@{}} Uwaga\\przestrzenna\end{tabular}} 
+        & Densenet121~\ref{fig:COCO_val2014_000000285645_spatial_DenseNet121_decoder_dim_512_fine_tune_encoder_true_fine_tune_embeddings_true-epoch-36} & 35,68 & 44,44 & A man riding skis down a snow covered slope. \\
+        & Densenet201~\ref{fig:COCO_val2014_000000285645_spatial_DenseNet201_decoder_dim_512_fine_tune_encoder_true_fine_tune_embeddings_true-epoch-34} & 35,68 & 44,44 & A man riding a snowboard down a snow covered slope \\
+        & InceptionV3~\ref{fig:COCO_val2014_000000285645_spatial_InceptionV3_decoder_dim_512_fine_tune_encoder_true_fine_tune_embeddings_true-epoch-36}   & 35,68 & 44,44 & A man riding a board on top of snow covered ground \\
+        \bottomrule
+\end{tabularx}
+\end{table}
+
+\input{rezultaty/uwaga/mapy_ciepla/adaptive_DenseNet121_decoder_dim_512_fine_tune_encoder_false_fine_tune_embeddings_false-epoch-11/COCO_val2014_000000285645_adaptive_DenseNet121_decoder_dim_512_fine_tune_encoder_false_fine_tune_embeddings_false-epoch-11}
+\input{rezultaty/uwaga/mapy_ciepla/adaptive_DenseNet201_decoder_dim_512_fine_tune_encoder_true_fine_tune_embeddings_true-epoch-17/COCO_val2014_000000285645_adaptive_DenseNet201_decoder_dim_512_fine_tune_encoder_true_fine_tune_embeddings_true-epoch-17}
+\input{rezultaty/uwaga/mapy_ciepla/adaptive_att_InceptionV3_decoder_dim_512_attention_dim_512_fine_tune_encoder_true_fine_false_embeddings_true-epoch-33/COCO_val2014_000000285645_adaptive_att_InceptionV3_decoder_dim_512_attention_dim_512_fine_tune_encoder_true_fine_false_embeddings_true-epoch-33}
+
+\input{rezultaty/uwaga/mapy_ciepla/densenet121_aoanet/COCO_val2014_000000285645_densenet121_aoanet}
+\input{rezultaty/uwaga/mapy_ciepla/densenet201_aoanet/COCO_val2014_000000285645_densenet201_aoanet}
+\input{rezultaty/uwaga/mapy_ciepla/inception_aoanet/COCO_val2014_000000285645_inception_aoanet}
+
+\input{rezultaty/uwaga/mapy_ciepla/att2all_DenseNet121_decoder_dim_512_fine_tune_encoder_true_fine_false_embeddings_true-epoch-41/COCO_val2014_000000285645_att2all_DenseNet121_decoder_dim_512_fine_tune_encoder_true_fine_false_embeddings_true-epoch-41}
+\input{rezultaty/uwaga/mapy_ciepla/att2all_DenseNet201_decoder_dim_512_attention_dim_512_fine_tune_encoder_false_no_emb-epoch-8/COCO_val2014_000000285645_att2all_DenseNet201_decoder_dim_512_attention_dim_512_fine_tune_encoder_false_no_emb-epoch-8}
+\input{rezultaty/uwaga/mapy_ciepla/att2all_Inception_decoder_dim_512_attention_dim_512_fine_tune_encoder_true_fine_tune_embeddings_true-epoch-39/COCO_val2014_000000285645_att2all_Inception_decoder_dim_512_attention_dim_512_fine_tune_encoder_true_fine_tune_embeddings_true-epoch-39}
+
+
+\input{rezultaty/uwaga/mapy_ciepla/spatial_DenseNet121_decoder_dim_512_fine_tune_encoder_true_fine_tune_embeddings_true-epoch-36/COCO_val2014_000000285645_spatial_DenseNet121_decoder_dim_512_fine_tune_encoder_true_fine_tune_embeddings_true-epoch-36}
+\input{rezultaty/uwaga/mapy_ciepla/spatial_DenseNet201_decoder_dim_512_fine_tune_encoder_true_fine_tune_embeddings_true-epoch-34/COCO_val2014_000000285645_spatial_DenseNet201_decoder_dim_512_fine_tune_encoder_true_fine_tune_embeddings_true-epoch-34}
+\input{rezultaty/uwaga/mapy_ciepla/spatial_InceptionV3_decoder_dim_512_fine_tune_encoder_true_fine_tune_embeddings_true-epoch-36/COCO_val2014_000000285645_spatial_InceptionV3_decoder_dim_512_fine_tune_encoder_true_fine_tune_embeddings_true-epoch-36}

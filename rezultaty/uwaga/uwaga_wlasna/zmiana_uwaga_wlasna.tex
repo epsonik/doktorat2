@@ -1,0 +1,17 @@
+\begin{table}
+\centering
+\fontsize{12pt}{12pt}\selectfont
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{|l|l|l|l|l|}
+\hline
+\textbf{BAZOWA   SIEĆ CNN} & \textbf{C} & \textbf{P} & \textbf{\% $\Delta$ C} & \textbf{\% $\Delta$ P} \\ \hline
+\textit{Resnet101} & \textit{110,66} & \textit{129,87} &  &  \\ \hline
+\textbf{Regnet16} & \textbf{117,60} & \textbf{168,93} & \textbf{6,27} & \textbf{30,08} \\ \hline
+Resnet152 & 108,92 & 145,51 & -1,57 & 12,05 \\ \hline
+Densenet201 & 100,65 & 105,33 & -9,04 & -18,89 \\ \hline
+Densenet121 & 98,45 & 94,20 & -11,04 & -27,47 \\ \hline
+Densenet161 & 95,30 & 114,01 & -13,89 & -12,22 \\ \hline
+InceptionV3 & 84,51 & 112,48 & -23,63 & -13,39 \\ \hline
+\end{tabular}}
+\caption{Zmiana wartości metryki CIDEr w stosunku do wyniku referencyjnego dla każdego z wariantów bazowej sieci CNN w modelu uwagi własnej}\label{res:zmiana_uwaga_wlasna}
+\end{table}
