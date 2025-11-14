@@ -1,0 +1,26 @@
+\begin{figure}[htbp]
+    \centering
+\begin{subfigure}{\textwidth}
+        \centering
+        \includesvg[width=\linewidth]{wykresy/spice/spice_drzewo_zalenosci}
+        \caption{Drzewo zależności wygenerowane dla przykładowego zdania.}
+        \label{fig:spice_drzewo}
+    \end{subfigure}
+
+    \vspace{1.5em}
+    \begin{subfigure}{0.48\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{zdjecia/spice_drzewo_zaleznosci_zdjecie.png}
+        \caption{Oryginalny obraz, którego dotyczy opis.}
+        \label{fig:spice_obraz_zrodlowy}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}{0.48\textwidth}
+        \centering
+        \includesvg[width=0.9\linewidth]{wykresy/spice/spice_graf_dla_drzewa}
+        \caption{Graf sceny powstały z drzewa zależności.}
+        \label{fig:spice_graf_z_drzewa}
+    \end{subfigure}
+    \caption{Proces generowania grafu sceny w metryce SPICE. Drzewo zależności (a) jest budowane dla zdania opisującego obraz (b), a następnie przekształcane w graf sceny (c) za pomocą systemu reguł.}
+    \label{fig:spice_budowa_drzewa}
+\end{figure}

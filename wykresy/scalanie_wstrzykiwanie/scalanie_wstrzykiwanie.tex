@@ -1,0 +1,34 @@
+
+\begin{figure}[htbp]
+\begin{subfigure}{\textwidth} 
+        \centering
+        \includesvg[width=0.9\linewidth]{wykresy/scalanie_wstrzykiwanie/wstrzykiwanie_poczatkowe}
+        \caption{Wstrzykiwanie inicjalne – cechy obrazu jako inicjalny stan ukryty RNN.}\label{fig:wstrzykiwanie_inicjalne}
+    \end{subfigure}
+    \vspace{1em}
+    \begin{subfigure}{\textwidth}
+        \centering
+        \includesvg[width=0.9\linewidth]{wykresy/scalanie_wstrzykiwanie/wstrzykiwanie_wstepne}
+        \caption{Wstrzykiwanie wstępne – obraz jako pierwsze słowo wejściowe do RNN.}
+        \label{fig:wstrzykiwanie_wstepne}
+    \end{subfigure}
+
+    \vspace{1em}
+    \begin{subfigure}{\textwidth}
+        \centering
+        \includesvg[width=0.75\linewidth]{wykresy/scalanie_wstrzykiwanie/wstrzykiwanie_rownolegle}
+            \caption{Wstrzykiwanie równoległe – obraz i słowo jako wejście w każdym kroku czasowym.}
+        \label{fig:wstrzykiwanie_rownolegle}
+    \end{subfigure}
+
+    \vspace{1em}
+    \begin{subfigure}{\textwidth}
+        \centering
+        \includesvg[width=0.75\linewidth]{wykresy/scalanie_wstrzykiwanie/architektura_scalania}
+            \caption{Architektura fuzji – połączenie wyjścia RNN i cech obrazu w warstwie multimodalnej.}
+        \label{fig:architektura_scalania}
+    \end{subfigure}
+
+    \caption{Zestawienie popularnych architektur wstrzykiwania cech obrazu (a-c) oraz architektury fuzji (d)~\cite{TantiGattCamilleri2018Where}.}
+    \label{fig:scalanie_wstrzykiwanie}
+\end{figure}

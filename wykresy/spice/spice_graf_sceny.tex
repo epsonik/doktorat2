@@ -1,0 +1,30 @@
+\begin{figure}[htbp]
+    \centering
+\begin{subfigure}{\textwidth}
+        \centering
+        \includesvg[width=0.7\linewidth]{wykresy/spice/spice_graf_sceny}
+        \caption{Wygenerowany graf sceny.}
+        \label{fig:spice_graf_grouped}
+    \end{subfigure}
+
+    \vspace{1.5em}
+    \begin{subfigure}{\textwidth}
+        \begin{minipage}[c]{0.5\textwidth}
+            \centering
+            \includegraphics[width=0.9\linewidth]{zdjecia/spice_graf_sceny_zdjecie.png}
+        \end{minipage}
+        \begin{minipage}[c]{0.5\textwidth}
+        \textbf{Podpisy referencyjne:}\\
+                Dwie kobiety siedzą przy białym stole.\\
+                Dwie kobiety siedzą przy stole w małym sklepie.\\
+                Dwie kobiety siedzą naprzeciwko siebie przy stole i uśmiechają się do zdjęcia.\\
+                Dwie kobiety siedzące w małym sklepie.\\
+                Dwie kobiety siedzą przy stole.\\
+        \end{minipage}
+        \caption{Oryginalny obraz oraz zestaw podpisów referencyjnych użytych do generowania grafu.}
+        \label{fig:spice_image_and_captions}
+    \end{subfigure}
+
+    \caption{Ilustracja działania metryki SPICE. Graf sceny (a) został wygenerowany na podstawie oryginalnego obrazu i jego opisów referencyjnych (b). Czerwone wierzchołki oznaczają obiekty, zielone atrybuty, a niebieskie krawędzie relacje.}
+    \label{fig:spice_graf_sceny_final}
+\end{figure}
