@@ -1,0 +1,59 @@
+
+\pgfplotsset{compat=1.18}
+
+\definecolor{colorFidelity}{HTML}{1F77B4}
+\definecolor{colorRelevance}{HTML}{FF7F0E}
+\definecolor{colorFluency}{HTML}{2CA02C}
+\definecolor{colorBias}{HTML}{000000}
+
+\newlength{\barmaxwidth}
+\setlength{\barmaxwidth}{3.5cm} 
+
+\newcommand{\databar}[3]{%
+    \begin{tikzpicture}
+        \pgfmathsetmacro{\barwidth}{#1 / #2 * \barmaxwidth}
+        \fill[#3] (0, -0.12) rectangle ++(\barwidth pt, 0.32);
+        \node[anchor=west, font=\small] at (\barwidth pt + 2pt, 0) {\pgfmathprintnumber[fixed, fixed zerofill, precision=2, use comma]{#1}\%};
+    \end{tikzpicture}%
+}
+
+\begin{table}[ht]
+    \centering
+    \small
+    \caption{Częstotliwość występowania poszczególnych typów błędów w generowanych opisach (N=988).}
+    \label{tab:error_chart_table_color}
+    \sisetup{
+        output-decimal-marker={,},
+        group-separator={.}
+    }
+    \begin{tabularx}{\textwidth}{p{2.5cm} X l}
+    \toprule
+    \textbf{Kategoria} & \textbf{Podkategoria} & {\textbf{Częstotliwość \% podpisów}} \\
+    \midrule
+    \multirow{5}{=}{Błędy Faktograficzne} 
+    & Błędna identyfikacja lub pominięcie obiektu & \databar{107.49}{107.49}{colorFidelity} \\
+    & Błędy relacji oraz lokalizacji obiektów & \databar{48.99}{107.49}{colorFidelity} \\
+    & Błędy atrybutów obiektów& \databar{39.17}{107.49}{colorFidelity} \\
+    & Błędy liczebności & \databar{23.79}{107.49}{colorFidelity} \\
+    & Halucynacja obiektu & \databar{12.15}{107.49}{colorFidelity} \\
+    \addlinespace
+    \midrule
+    \multirow{3}{=}{Błędy Spójności Semantycznej} 
+    & Brak istotności / Skupienie na detalu & \databar{67.41}{107.49}{colorRelevance} \\
+    & Ogólnikowość / Nadmierna generalizacja & \databar{57.79}{107.49}{colorRelevance} \\
+    & Błędna interpretacja kontekstu sceny & \databar{35.53}{107.49}{colorRelevance} \\
+    \addlinespace
+    \midrule
+    \multirow{3}{=}{Błędy Płynności Językowej} 
+    & Błędy gramatyczne i składniowe & \databar{6.07}{107.49}{colorFluency} \\
+    & Problemy z płynnością i czytelnością & \databar{5.87}{107.49}{colorFluency} \\
+    & Brak zwięzłości / Redundancja & \databar{4.45}{107.49}{colorFluency} \\
+    \addlinespace
+    \midrule
+    \multirow{2}{=}{Uprzedzenia i Szkody Społeczne} 
+    & Wymazywanie tożsamości & \databar{2.33}{107.49}{colorBias} \\
+    & Stereotypizacja i uprzedzenia & \databar{2.02}{107.49}{colorBias} \\
+    \addlinespace
+    \bottomrule
+    \end{tabularx}
+\end{table}
